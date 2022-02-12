@@ -14,6 +14,8 @@ Clean architecture
 
 ### API Documentation
 Run the API project to view the Swagger UI at <https://localhost:44308/swagger/index.html>
+![Swagger](https://user-images.githubusercontent.com/88857388/153718562-594cc0a1-5a6e-4c27-ac14-25af580fc86e.JPG)
+
 
 ### Dependency injection
 Inversion of Control between clasess and their dependencies in the API is achieved using the built-in support for dependency injection in `.NET 6`
