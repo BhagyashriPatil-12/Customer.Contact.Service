@@ -54,13 +54,7 @@ namespace Customer.Contact.Api
             // Arrange            
             var contactController = new ContactController(_mockContactService.Object, _mockLogger.Object);
 
-            var contactDetails = new ContactResponseDto
-            {
-                Email = "Test@gmail.com",
-                PhoneNumber = "+46123456789",
-                CustomerId = 1,
-                SocialSecurityNumber = 1234567890,
-            };
+            ContactResponseDto contactDetails = GetCustomerContactDetails();
             _mockContactService.Setup(x => x.GetContactDetailsById(It.IsAny<int>())).Returns(Task.FromResult(contactDetails));
 
             // Act
@@ -68,7 +62,7 @@ namespace Customer.Contact.Api
 
             // Assert
             Assert.IsType<OkObjectResult>(response);
-        }
+        }        
 
         [Fact]
         public async Task Post_Returns_CreatedContactIdAsResponse()
@@ -92,17 +86,30 @@ namespace Customer.Contact.Api
         }
 
         [Fact]
-        public async Task Delete_Returns_TrueIfContatDetailsForGivenIdIsRemoved()
+        public async Task Delete_ContatDetailsForGivenCustomerId()
         {
-            // Arrange           
+            // Arrange
+            ContactResponseDto contactDetails = GetCustomerContactDetails();
+            _mockContactService.Setup(x => x.GetContactDetailsById(It.IsAny<int>())).Returns(Task.FromResult(contactDetails));
             var contactController = new ContactController(_mockContactService.Object, _mockLogger.Object);
-            _mockContactService.Setup(x => x.DeleteContactDetails(It.IsAny<int>())).Returns(Task.FromResult(true));
+            _mockContactService.Setup(x => x.DeleteContactDetails(It.IsAny<int>()));
 
             // Act
             var response = await contactController.Delete(It.IsAny<int>()) as NoContentResult;
 
             // Assert
             Assert.IsType<NoContentResult>(response);
+        }
+
+        private static ContactResponseDto GetCustomerContactDetails()
+        {
+            return new ContactResponseDto
+            {
+                Email = "Test@gmail.com",
+                PhoneNumber = "+46123456789",
+                CustomerId = 1,
+                SocialSecurityNumber = 1234567890,
+            };
         }
     }
 }
