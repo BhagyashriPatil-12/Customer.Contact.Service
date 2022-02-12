@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{73D66375-ED3C-4AC4-A26F-7077A9FCA2CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Contact.Api", "src\Customer.Contact.Api\Customer.Contact.Api.csproj", "{DA566212-6D99-4425-996E-D0F62FAF010B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Contact.Core", "src\Customer.Contact.Core\Customer.Contact.Core.csproj", "{52A77274-01B7-4B9E-AF09-F094B42995F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Contact.Infrastructure", "src\Customer.Conatct.Infrastructure\Customer.Contact.Infrastructure.csproj", "{2ED37606-9032-4AFE-820B-5D6103C69788}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{36A7F6C5-91CB-4397-AF7C-8B9068ED2A9A}"
+	ProjectSection(SolutionItems) = preProject
+		src\Database\Customer.db = src\Database\Customer.db
+		src\Database\Customer.db-shm = src\Database\Customer.db-shm
+		src\Database\Customer.db-wal = src\Database\Customer.db-wal
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4D8E1520-7B94-4E2C-9384-6275F32D28BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Contact.Api.Test", "tests\Customer.Contact.Api\Customer.Contact.Api.Test.csproj", "{6259D627-C279-4823-A641-F9CCA526C74D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Customer.Contact.Infrastruture.Test", "tests\Customer.Contact.Infrastruture\Customer.Contact.Infrastruture.Test.csproj", "{0DDD3C93-6113-4774-AA5A-959DFAC8A6A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D89C8724-DDFD-4113-9F6F-F9DB8AA6A01A}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+		README.md = README.md
+		Swagger.JPG = Swagger.JPG
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA566212-6D99-4425-996E-D0F62FAF010B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA566212-6D99-4425-996E-D0F62FAF010B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA566212-6D99-4425-996E-D0F62FAF010B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA566212-6D99-4425-996E-D0F62FAF010B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A77274-01B7-4B9E-AF09-F094B42995F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A77274-01B7-4B9E-AF09-F094B42995F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A77274-01B7-4B9E-AF09-F094B42995F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A77274-01B7-4B9E-AF09-F094B42995F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED37606-9032-4AFE-820B-5D6103C69788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED37606-9032-4AFE-820B-5D6103C69788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED37606-9032-4AFE-820B-5D6103C69788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED37606-9032-4AFE-820B-5D6103C69788}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6259D627-C279-4823-A641-F9CCA526C74D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6259D627-C279-4823-A641-F9CCA526C74D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6259D627-C279-4823-A641-F9CCA526C74D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6259D627-C279-4823-A641-F9CCA526C74D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DDD3C93-6113-4774-AA5A-959DFAC8A6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DDD3C93-6113-4774-AA5A-959DFAC8A6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DDD3C93-6113-4774-AA5A-959DFAC8A6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DDD3C93-6113-4774-AA5A-959DFAC8A6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA566212-6D99-4425-996E-D0F62FAF010B} = {73D66375-ED3C-4AC4-A26F-7077A9FCA2CB}
+		{52A77274-01B7-4B9E-AF09-F094B42995F0} = {73D66375-ED3C-4AC4-A26F-7077A9FCA2CB}
+		{2ED37606-9032-4AFE-820B-5D6103C69788} = {73D66375-ED3C-4AC4-A26F-7077A9FCA2CB}
+		{36A7F6C5-91CB-4397-AF7C-8B9068ED2A9A} = {73D66375-ED3C-4AC4-A26F-7077A9FCA2CB}
+		{6259D627-C279-4823-A641-F9CCA526C74D} = {4D8E1520-7B94-4E2C-9384-6275F32D28BF}
+		{0DDD3C93-6113-4774-AA5A-959DFAC8A6A1} = {4D8E1520-7B94-4E2C-9384-6275F32D28BF}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D31C39E-3EC0-4ECE-8576-1FC9B83188A0}
+	EndGlobalSection
+EndGlobal
